@@ -17,11 +17,11 @@
             "dest": "/server/index.js"
         },
         {
-            "src": "/(.*)",
-            "dest": "/client/index.html"
+            "handle": "filesystem"
         },
         {
-            "handle": "filesystem"
+            "src": "/(.*)",
+            "dest": "/client/index.html"
         }
     ]
 }
