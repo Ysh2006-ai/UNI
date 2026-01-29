@@ -20,7 +20,7 @@
             "handle": "filesystem"
         },
         {
-            "src": "/(.*)",
+            "src": "/(?!assets/|.*\\.png|.*\\.svg|.*\\.ico)(.*)",
             "dest": "/client/index.html"
         }
     ]
