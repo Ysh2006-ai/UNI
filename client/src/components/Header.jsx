@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Header = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const { isAuthenticated, user } = useAuth();
 
     useEffect(() => {
         if (isDarkMode) {
@@ -29,7 +31,18 @@ const Header = () => {
                         <li><a href="/#how-it-works">How It Works</a></li>
                         <li><a href="/#benefits">Benefits</a></li>
                         <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/login" className="btn login-btn">Login <i className="fas fa-sign-in-alt"></i></Link></li>
+                        {isAuthenticated ? (
+                            <li>
+                                <Link 
+                                    to={user?.role === 'client' ? '/client-dashboard' : '/engineer-dashboard'} 
+                                    className="btn login-btn"
+                                >
+                                    Dashboard <i className="fas fa-tachometer-alt"></i>
+                                </Link>
+                            </li>
+                        ) : (
+                            <li><Link to="/login" className="btn login-btn">Login <i className="fas fa-sign-in-alt"></i></Link></li>
+                        )}
                     </ul>
                     <button
                         id="dark-mode-toggle"

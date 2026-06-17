@@ -20,29 +20,42 @@ UNI is a modern platform designed to bridge the gap between clients and engineer
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React.js, Vite
+- **Frontend**: React.js, Vite, Axios, React Router DOM
+- **Backend**: Node.js, Express, JWT Authentication
+- **Database**: MongoDB (supports in-memory dev mode & external database)
 - **Styling**: CSS3 (Glassmorphism, Flexbox/Grid), FontAwesome
-- **State Management**: React Hooks (useState, useEffect)
-- **Routing**: React Router DOM
 
-## 📦 Installation
+## 📦 Installation & Setup
 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/yourusername/uni-platform.git
    cd uni-platform
-    ```
+   ```
 
-2. **Install Client Dependencies**:
-    ```bash
-    cd client
-    npm install
-    ```
+2. **Install All Dependencies (Root, Client, and Server)**:
+   From the project root directory, run:
+   ```bash
+   npm install && npm run install:all
+   ```
 
-3. **Run the Application**:
-    ```bash
-    npm run dev
-    ```
+3. **Run the Full-Stack Application**:
+   Starts both the frontend and backend servers concurrently:
+   ```bash
+   npm run dev
+   ```
+
+## 📋 Demo Accounts
+
+You can log in and test all user flows immediately using these pre-seeded accounts:
+
+### Client Portal
+* **Email**: `client@demo.com`
+* **Password**: `password123`
+
+### Engineer Portal
+* **Email**: `rajesh@demo.com` or `neha@demo.com`
+* **Password**: `password123`
 
 ## 🤝 Contributing
 
