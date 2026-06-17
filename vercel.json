@@ -17,6 +17,22 @@
             "dest": "/server/index.js"
         },
         {
+            "src": "/assets/(.*)",
+            "dest": "/client/assets/$1"
+        },
+        {
+            "src": "/logo.png",
+            "dest": "/client/logo.png"
+        },
+        {
+            "src": "/login_bg.png",
+            "dest": "/client/login_bg.png"
+        },
+        {
+            "src": "/vite.svg",
+            "dest": "/client/vite.svg"
+        },
+        {
             "handle": "filesystem"
         },
         {
